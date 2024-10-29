@@ -48,3 +48,12 @@ jobs:
 
             - name: Run tests
               run: yarn test
+
+            - name: Upload test artifacts
+              if: failure()
+              uses: actions/upload-artifact@v4.3.6
+              with:
+                name: test-artifacts
+                path: |
+                    tests/_output/*.png
+                    tests/_output/*.html
