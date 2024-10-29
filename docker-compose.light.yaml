@@ -1,0 +1,28 @@
+services:
+    db:
+        image: yobasystems/alpine-mariadb:10.11.6
+        container_name: db_lesheraia
+        restart: 'no'
+        volumes:
+            - db-data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: pass123
+        ports:
+            - "3306:3306"
+        networks:
+            - dev
+    maildev:
+        image: maildev/maildev
+        container_name: maildev_lesheraia
+        restart: no
+        ports:
+            - '1080:1080'
+            - '1025:1025'
+        networks:
+            - dev
+
+networks:
+    dev:
+
+volumes:
+    db-data:
