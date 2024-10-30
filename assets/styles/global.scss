@@ -1,7 +1,7 @@
-// Bootstrap
-@import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-select/sass/bootstrap-select.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
+// Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 // jQuery-confirm
 @import "jquery-confirm/css/jquery-confirm.css";
