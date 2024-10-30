@@ -16,6 +16,6 @@ final readonly class LoginCest
     {
         $I->loginAs('invalidAccount');
         $I->seeCurrentUrlEquals('/login');
-        $I->seeElement('.alert.alert-danger');
+        $I->seeElement('#login-error-flash');
     }
 }
