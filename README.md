@@ -1,8 +1,9 @@
 # Les Héraia Web
 
-Website project for Les Héraia (French podcast group)
-<br/>
-<img src="/public/images/logo/lesheraia_large.jpg" alt="lesheraia" height="380">
+<div align="center">
+    <p>Website project for Les Héraia (French podcast group)</p>
+    <img src="/public/images/logo/lesheraia_large.jpg" alt="lesheraia" height="380px">
+</div>
 
 ## Author
 - Orden14  
@@ -32,7 +33,11 @@ yarn dependencies
 ```bash
 docker-compose up -d
 ```
-4. Start the project
+4. Truncate de database to fill the tables with test data
+```bash
+yarn truncate-database
+```
+5. Start the developping web server
 ```bash
 yarn server-start
 ```
